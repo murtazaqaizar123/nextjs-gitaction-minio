@@ -1,7 +1,11 @@
 // next.config.js
-module.exports = {
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    loader: 'default',  // or 'imgix' or 'akamai' or 'cloudinary' depending on your setup
-    unoptimized: true,
+    unoptimized: true, // ✅ disables built-in image optimization
   },
+  reactStrictMode: true,
 };
+
+module.exports = nextConfig;
